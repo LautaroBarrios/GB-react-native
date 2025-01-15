@@ -11,8 +11,8 @@ export function Main() {
       <View style={{ alignItems: "center" }}>
         <Logo />
       </View>
-      <ActivityIndicator size="large" color="yellow" />
-      <Text style={styles.text}>Hi!</Text>
+      {/* <ActivityIndicator size="large" color="yellow" /> */}
+      <Text className="color-white font-bold text-center text-4xl">Hi!</Text>
       <ButtonAlert data={[1, 2, 3]} />
     </View>
   );
