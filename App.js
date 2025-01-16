@@ -3,23 +3,16 @@ import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Main } from "./components/Main";
 import "./global.css";
+import { SideBar } from "./components/SideBar";
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <View style={styles.container}>
+      <View className="flex-1 bg-slate-900 items-center justify-center relative">
         <StatusBar style="auto" />
+        <SideBar />
         <Main />
       </View>
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "blue",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

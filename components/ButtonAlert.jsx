@@ -6,9 +6,9 @@ export function ButtonAlert({data}) {
      underlayColor={"#ccc"}
      onPress={() => alert("Button pressed")}
      style={{
-       width: 200,
-       height: 200,
-       backgroundColor: "red",
+       width: 80,
+       height: 24,
+       backgroundColor: "yellow",
        borderRadius: 20,
        alignItems: "center",
        justifyContent: "center",
