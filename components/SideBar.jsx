@@ -13,8 +13,8 @@ export const SideBar = () => {
       {/* Buttons  */}
       {options.map((option, index) => {
         return (
-          <Pressable key={index} className="border-b border-gray-950 px-3 py-3">
-            <Text className="font-bold text-black">{option}</Text>
+          <Pressable key={index} className="border-b border-slate-950 px-3 py-3">
+            <Text className="font-bold text-slate-950">{option}</Text>
           </Pressable>
         );
       })}
