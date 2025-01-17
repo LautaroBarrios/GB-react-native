@@ -12,7 +12,9 @@ export const SideBar = () => {
     >
       {/* Icon */}
       {state && (
-        <View className="items-center justify-center border-b border-slate-950">
+        <View
+          className={`items-center justify-center border-b border-slate-950 transition-opacity ${state ? "opacity-100" : "opacity-0"}`}
+        >
           <Image
             source={Icon}
             style={{
