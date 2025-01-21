@@ -8,7 +8,7 @@ export function ButtonAlert({ data }) {
       style={{
         width: 80,
         height: 24,
-        backgroundColor: "yellow",
+        backgroundColor: "#ffff00",
         borderRadius: 20,
         alignItems: "center",
         justifyContent: "center",
