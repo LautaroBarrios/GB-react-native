@@ -5,22 +5,11 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Icon from "../assets/favicon.png";
 
-export const SideBar = () => {
+export const SideBar = ({ setView }) => {
   const [state, setState] = useState(false);
   const [delayedState, setDelayedState] = useState(false);
   const insets = useSafeAreaInsets();
   const options = ["Inicio", "Ejercicios", "Rutina", "Configuración"];
-
-  // Efecto para manejar el retraso en la opacidad
-  useEffect(() => {
-    let timer;
-    if (state) {
-      timer = setTimeout(() => setDelayedState(true), 150);
-    } else {
-      setDelayedState(false);
-    }
-    return () => clearTimeout(timer);
-  }, [state]);
 
   return (
     <View
@@ -29,9 +18,7 @@ export const SideBar = () => {
       {/* Icon */}
       {state && (
         <View
-          className={`items-center justify-center border-b border-slate-950 transition-opacity ${
-            delayedState ? "opacity-100" : "opacity-0"
-          }`}
+          className={`items-center justify-center border-b border-slate-900 transition-all`}
           style={{ paddingTop: insets.top }}
         >
           <Image
@@ -46,20 +33,16 @@ export const SideBar = () => {
         </View>
       )}
 
-      {/* Buttons */}
+      {/* Buttons  */}
       {state &&
         options.map((option, index) => {
           return (
             <Pressable
               key={index}
-              className="border-b border-slate-950 px-3 py-3 active:scale-95 transition-all"
+              className="border-b border-slate-900 px-3 py-3 transition-all"
             >
               <Text
-                className="font-bold text-slate-950 whitespace-nowrap transition-opacity"
-                style={{
-                  opacity: delayedState ? 1 : 0,
-                  transition: "opacity 0.3s ease",
-                }}
+                className={`font-bold text-slate-900 whitespace-nowrap transition-opacity ${state ? "opacity-100" : "opacity-0"}`}
               >
                 {option}
               </Text>
