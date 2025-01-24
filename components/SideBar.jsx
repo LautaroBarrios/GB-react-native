@@ -7,7 +7,6 @@ import Icon from "../assets/favicon.png";
 
 export const SideBar = ({ setView }) => {
   const [state, setState] = useState(false);
-  const [delayedState, setDelayedState] = useState(false);
   const insets = useSafeAreaInsets();
   const options = ["Inicio", "Ejercicios", "Rutina", "Configuración"];
 
@@ -39,6 +38,10 @@ export const SideBar = ({ setView }) => {
           return (
             <Pressable
               key={index}
+              onPress={() => {
+                setView(option);
+                setState(false);
+              }}
               className="border-b border-slate-900 px-3 py-3 transition-all"
             >
               <Text
