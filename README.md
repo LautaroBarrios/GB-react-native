@@ -19,7 +19,7 @@ Ubicado en la ruta principal, ejecutar:
 Instaladas las dependencias, ejecute el siguiente comando:
 
 ```bash
-  eas build -p android --profile preview
+  eas build -p android --profile apk
 ```
 
 - [Tutorial .apk](https://dev.to/chinmaymhatre/how-to-generate-apk-using-react-native-expo-kae)
