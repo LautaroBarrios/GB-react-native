@@ -1,5 +1,5 @@
 import { Pressable, View, Text, Image } from "react-native";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "../icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 

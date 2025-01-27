@@ -14,7 +14,7 @@ export function Home() {
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       {/* <ActivityIndicator size="large" color="yellow" /> */}
-      <Text style={styles.title}>Hi!</Text>
+      <Text style={{ ...styles.title, color: "white" }}>Hi!</Text>
       <ButtonAlert data={[1, 2, 3]} />
     </View>
   );

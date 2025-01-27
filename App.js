@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <SafeAreaProvider>
-      <View className="flex-1 bg-slate-900 items-center justify-center relative">
+      <View className="flex-1 bg-slate-900 items-center justify-center w-full relative">
         <StatusBar style="auto" />
         <SideBar setView={setView} />
         {view === "Inicio" && <Home />}
