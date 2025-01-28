@@ -1,7 +1,6 @@
-import { View, Text, Pressable } from "react-native";
-import { styles } from "../styles/index";
-import { Plus } from "../icons";
+import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Header } from "../components/Header";
 
 export function Exercices() {
   const insets = useSafeAreaInsets();
@@ -11,13 +10,7 @@ export function Exercices() {
       style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
       className="flex justify-start items-start w-full h-full"
     >
-      {/* Contenedor horizontal */}
-      <View style={styles.header}>
-        <Text style={styles.title}>Ejercicios</Text>
-        <Pressable style={styles.buttonCreate} className="active:scale-95 transition-all">
-          <Plus />
-        </Pressable>
-      </View>
+      <Header title={"Ejercicios"} onPress={"vacio"}/>
     </View>
   );
 }

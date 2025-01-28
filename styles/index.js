@@ -10,12 +10,30 @@ export const styles = StyleSheet.create({
 
   text: {
     color: "#ffff00",
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
     textShadowColor: "#0f172a",
     textShadowOffset: { width: -1.5, height: 1.5 },
     textShadowRadius: 1,
+  },
+
+  textButton: {
+    color: "#0f172a",
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+
+  headerTransparent: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#324154",
+    width: "100%",
+    justifyContent: "space-between",
+    paddingHorizontal: 15,
+    paddingVertical: 10,
   },
 
   header: {
@@ -29,6 +47,15 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
   },
 
+  button: {
+    width: 100,
+    height: 35,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+    backgroundColor: "#ffff00",
+  },
+
   buttonCreate: {
     width: 35,
     height: 35,
@@ -38,11 +65,10 @@ export const styles = StyleSheet.create({
     backgroundColor: "#0f1729",
   },
 
-  containerCenter:{
+  containerCenter: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 10,
   },
 
   cardRoutine: {
