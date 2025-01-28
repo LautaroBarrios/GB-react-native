@@ -1,11 +1,16 @@
 import { View, Text, ScrollView, FlatList } from "react-native";
 import { styles } from "../styles/index";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export function Routine() {
   const routines = Array.from({ length: 30 }, (_, index) => index);
+  const insets = useSafeAreaInsets();
 
   return (
-    <View className="flex-1 w-full p-2 m-4">
+    <View
+      className="flex-1 w-full p-2 m-4"
+      style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
+    >
       <ScrollView>
         <View style={styles.containerCenter}>
           <FlatList

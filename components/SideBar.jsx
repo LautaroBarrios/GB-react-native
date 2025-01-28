@@ -12,7 +12,7 @@ export const SideBar = ({ setView }) => {
 
   return (
     <View
-      className={`${!state ? "absolute h-full w-0 bottom-0 left-0" : "absolute h-full w-36 bottom-0 left-0 bg-[#ffff00] border-r-[5px] border-[#0f1729]"} z-10 transition-all`}
+      className={`${!state ? "absolute h-full w-0 bottom-0 left-0" : "absolute h-full w-36 bottom-0 left-0 bg-[#ffff00] border-r-[4px] border-[#0f1729]"} z-10 transition-all`}
     >
       <View className="flex flex-row">
         <View className="w-[10px]" />
