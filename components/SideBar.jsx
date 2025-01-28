@@ -12,46 +12,51 @@ export const SideBar = ({ setView }) => {
 
   return (
     <View
-      className={`${!state ? "absolute h-full w-0 bottom-0 left-0" : "absolute h-full w-36 bottom-0 left-0 bg-[#ffff00] border-l-[10px] border-[#ffff00]"} z-10 transition-all`}
+      className={`${!state ? "absolute h-full w-0 bottom-0 left-0" : "absolute h-full w-36 bottom-0 left-0 bg-[#ffff00] border-r-[5px] border-[#0f1729]"} z-10 transition-all`}
     >
-      {/* Icon */}
-      {state && (
-        <View
-          className={`items-center justify-center border-b border-slate-900 transition-all`}
-          style={{ paddingTop: insets.top }}
-        >
-          <Image
-            source={Icon}
-            style={{
-              width: 100,
-              height: 100,
-              marginVertical: 20,
-              marginRight: 10,
-            }}
-          />
-        </View>
-      )}
-
-      {/* Buttons  */}
-      {state &&
-        options.map((option, index) => {
-          return (
-            <Pressable
-              key={index}
-              onPress={() => {
-                setView(option);
-                setState(false);
-              }}
-              className="border-b border-slate-900 px-3 py-3 transition-all"
+      <View className="flex flex-row">
+        <View className="w-[10px]" />
+        <View className="flex-1">
+          {/* Icon */}
+          {state && (
+            <View
+              className={`items-center justify-center border-b border-slate-900 transition-all`}
+              style={{ paddingTop: insets.top }}
             >
-              <Text
-                className={`font-bold text-slate-900 whitespace-nowrap transition-opacity ${state ? "opacity-100" : "opacity-0"}`}
-              >
-                {option}
-              </Text>
-            </Pressable>
-          );
-        })}
+              <Image
+                source={Icon}
+                style={{
+                  width: 100,
+                  height: 100,
+                  marginVertical: 20,
+                  marginRight: 10,
+                }}
+              />
+            </View>
+          )}
+
+          {/* Buttons  */}
+          {state &&
+            options.map((option, index) => {
+              return (
+                <Pressable
+                  key={index}
+                  onPress={() => {
+                    setView(option);
+                    setState(false);
+                  }}
+                  className="border-b border-slate-900 px-3 py-3 transition-all"
+                >
+                  <Text
+                    className={`font-bold text-slate-900 whitespace-nowrap transition-opacity ${state ? "opacity-100" : "opacity-0"}`}
+                  >
+                    {option}
+                  </Text>
+                </Pressable>
+              );
+            })}
+        </View>
+      </View>
 
       {/* Button Open and Close */}
       <Pressable

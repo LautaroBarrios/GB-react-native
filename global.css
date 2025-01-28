@@ -1,3 +1,14 @@
 @tailwind base;
+
+/* Firefox */
+:root {
+  --primary: #324154;
+  --secondary: #ffff00;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
 @tailwind components;
 @tailwind utilities;
