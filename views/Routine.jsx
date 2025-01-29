@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  FlatList,
-  TextInput,
-  Button,
-  Pressable,
-} from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { styles } from "../styles/index";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
@@ -19,6 +11,7 @@ import {
 } from "../utils/routineFunctions";
 import { EditRoutine } from "../components/forms/EditRoutine";
 import { Header } from "../components/Header";
+import { ShowRoutine } from "../components/forms/ShowRoutine";
 
 export function Routine() {
   const [routines, setRoutines] = useState([]);
@@ -85,25 +78,11 @@ export function Routine() {
             handleCancelEditing={handleCancelEditing}
           />
         ) : (
-          <View style={styles.cardRoutine}>
-            <Text style={styles.text}>Ejercicio:{item.ejercicio}</Text>
-            <Text style={styles.text}>Series: {item.series}</Text>
-            <Text style={styles.text}>Repeticiones: {item.repeticiones}</Text>
-            <Pressable
-              style={styles.button}
-              className="active:scale-95"
-              onPress={() => handleStartEditing(item)}
-            >
-              <Text style={styles.textButton}>Editar</Text>
-            </Pressable>
-            <Pressable
-              style={styles.button}
-              className="active:scale-95"
-              onPress={() => handleDeleteRoutine(item.id)}
-            >
-              <Text style={styles.textButton}>Eliminar</Text>
-            </Pressable>
-          </View>
+          <ShowRoutine
+            item={item}
+            handleDeleteRoutine={handleDeleteRoutine}
+            handleStartEditing={handleStartEditing}
+          />
         )}
       </View>
     );
@@ -114,18 +93,32 @@ export function Routine() {
       className="flex-1 w-full p-2 m-4"
       style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
     >
-      <ScrollView>
-        <View style={styles.containerCenter}>
-          <Header title={"Rutina"} functionPress={handleAddRoutine} />
+      {/* Header fijo */}
+      <Header title={"Rutina"} functionPress={handleAddRoutine} />
 
-          <FlatList
-            data={routines}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={renderItem}
-            style={{ width: "90%", paddingVertical: 10 }}
-          />
+      <View style={{ padding: 10 }}>
+        {/* Encabezado de la tabla */}
+        <View style={styles.cardRoutine}>
+          {["EJERCICIO", "SERIES", "REPES", "OPCIONES"].map((title, index) => (
+            <View
+              key={index}
+              style={[
+                styles.tableHead,
+                { borderRightWidth: index !== 3 ? 2 : 0 },
+              ]}
+            >
+              <Text style={styles.text}>{title}</Text>
+            </View>
+          ))}
         </View>
-      </ScrollView>
+
+        {/* Lista desplazable */}
+        <FlatList
+          data={routines}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={renderItem}
+        />
+      </View>
     </View>
   );
 }

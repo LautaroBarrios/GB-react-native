@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
 
   text: {
     color: "#ffff00",
-    fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
     textShadowColor: "#0f172a",
@@ -20,7 +19,6 @@ export const styles = StyleSheet.create({
 
   textButton: {
     color: "#0f172a",
-    fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
   },
@@ -48,7 +46,7 @@ export const styles = StyleSheet.create({
   },
 
   button: {
-    width: 100,
+    width: 80,
     height: 35,
     justifyContent: "center",
     alignItems: "center",
@@ -78,8 +76,48 @@ export const styles = StyleSheet.create({
     justifyContent: "space-around",
     width: "100%",
     backgroundColor: "#324154",
-    padding: 8,
+    paddingVertical: 8,
     borderRadius: 5,
-    marginVertical: 7,
+    marginTop: 7,
+  },
+
+  cell: {
+    display: "flex",
+    width: "25%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 5,
+    borderRightWidth: 2,
+    borderRightColor: "#0f1729",
+  },
+
+  cellOptions: {
+    display: "flex",
+    width: "25%",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 5,
+  },
+
+  textInput: {
+    width: "100%",
+    paddingVertical: 20,
+    color: "#ffff00",
+    fontWeight: "bold",
+    textAlign: "center",
+    textShadowColor: "#0f172a",
+    textShadowOffset: { width: -1.5, height: 1.5 },
+    textShadowRadius: 1,
+  },
+
+  tableHead: {
+    display: "flex",
+    flexDirection: "row",
+    width: "25%",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRightColor: "#0f1729",
+    paddingHorizontal: 10,
   },
 });
