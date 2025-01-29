@@ -107,7 +107,13 @@ export function Routine() {
                 { borderRightWidth: index !== 3 ? 2 : 0 },
               ]}
             >
-              <Text style={styles.text}>{title}</Text>
+              <Text
+                style={styles.text}
+                adjustsFontSizeToFit
+                minimumFontScale={0.5}
+              >
+                {title}
+              </Text>
             </View>
           ))}
         </View>

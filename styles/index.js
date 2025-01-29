@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   },
 
   button: {
-    width: 80,
+    width: 75,
     height: 35,
     justifyContent: "center",
     alignItems: "center",
