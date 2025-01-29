@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   },
 
   button: {
-    width: 75,
+    width: 70,
     height: 35,
     justifyContent: "center",
     alignItems: "center",
@@ -119,6 +119,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRightColor: "#0f1729",
-    paddingHorizontal: 10,
+    paddingHorizontal: 8,
   },
 });

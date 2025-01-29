@@ -110,6 +110,7 @@ export function Routine() {
               <Text
                 style={styles.text}
                 adjustsFontSizeToFit
+                numberOfLines={1}
                 minimumFontScale={0.5}
               >
                 {title}
