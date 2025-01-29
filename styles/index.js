@@ -85,6 +85,7 @@ export const styles = StyleSheet.create({
     display: "flex",
     width: "25%",
     height: "100%",
+    maxHeight: "100%",
     justifyContent: "center",
     alignItems: "center",
     padding: 5,
