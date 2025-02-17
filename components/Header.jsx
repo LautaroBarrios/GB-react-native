@@ -7,8 +7,8 @@ export const Header = ({ title, functionPress }) => {
     <View style={styles.header}>
       <Text style={styles.title}>{title}</Text>
       <Pressable
-        style={styles.buttonCreate}
-        onPress={functionPress} // Cambiado a `onPress`
+        style={styles.buttonIcon}
+        onPress={functionPress}
         className="active:scale-95 transition-all"
       >
         <Plus />

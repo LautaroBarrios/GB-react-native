@@ -46,20 +46,20 @@ export const styles = StyleSheet.create({
   },
 
   button: {
-    width: 80,
+    width: 100,
     height: 35,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 5,
+    borderRadius: 2,
     backgroundColor: "#ffff00",
   },
 
-  buttonCreate: {
+  buttonIcon: {
     width: 35,
     height: 35,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 5,
+    borderRadius: 2,
     backgroundColor: "#0f1729",
   },
 
@@ -71,49 +71,45 @@ export const styles = StyleSheet.create({
 
   cardRoutine: {
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: "col",
     alignItems: "center",
     justifyContent: "space-around",
     width: "100%",
     backgroundColor: "#324154",
-    paddingVertical: 8,
+    padding: 10,
     borderRadius: 2,
     marginTop: 7,
     gap: 5,
   },
 
-  cell: {
-    display: "flex",
-    width: "45%",
-    borderRadius: 5,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 10,
-    borderWidth: 2,
-    borderColor: "#0f1729",
-    gap: 10,
-  },
-
-  cellOptions: {
+  rowFlex: {
     display: "flex",
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     width: "100%",
+  },
+
+  cell: {
+    display: "flex",
+    width: "25%",
+    borderRadius: 2,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 4,
-    gap: 10,
+    padding: 6,
+    borderWidth: 2,
+    borderColor: "#0f1729",
   },
 
   textInput: {
     width: "100%",
-    // marginVertical: 5,
-    // paddingVertical: 2,
     color: "#ffff00",
     fontWeight: "bold",
     textAlign: "center",
     textShadowColor: "#0f172a",
     textShadowOffset: { width: -1.5, height: 1.5 },
     textShadowRadius: 1,
+    borderWidth: 0,
+    outlineStyle: "none",
   },
 });

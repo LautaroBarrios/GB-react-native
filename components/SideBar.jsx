@@ -61,7 +61,7 @@ export const SideBar = ({ setView }) => {
       {/* Button Open and Close */}
       <Pressable
         onPress={() => setState(!state)}
-        className={`absolute p-3 h-[60px] w-[60px] rounded-r-full bottom-10 bg-[#ffff00] active:scale-95 transition-all ${
+        className={`absolute p-3 h-[60px] w-[60px] rounded-r-full top-20 bg-[#ffff00] active:scale-95 transition-all ${
           state ? "left-[117px]" : "left-0"
         }`}
       >

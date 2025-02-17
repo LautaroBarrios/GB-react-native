@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="95a07e6c-b1fe-4a86-93e0-084d52d7d2f7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/ShowRoutine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/ShowRoutine.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/Plus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/icons/Plus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/icons/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/routineFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/routineFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Routine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/views/Routine.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

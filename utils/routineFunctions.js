@@ -25,25 +25,32 @@ export const addRoutine = (routines) => {
   const newRoutine = {
     id: Date.now(),
     ejercicio: "",
-    serie: "",
-    repeticiones: "",
-    peso: "",
-    rir: "",
-    día: "",
-    notas: "",
-    fecha: new Date().toLocaleDateString(),
+    series: [{ set: 1, reps: "", peso: "", rir: 1 }],
   };
   return [...routines, newRoutine];
+};
+
+// Agregar una serie a una rutina
+export const addSeries = (routines, routineId) => {
+  return routines.map((routine) => {
+    console.log(routine);
+    
+    if (routine.id === routineId) {
+      const newSetNumber =
+        routine?.series?.length == 0 ? 1 : routine.series.length + 1; 
+      return {
+        ...routine,
+        series: [
+          ...routine.series,
+          { set: newSetNumber, reps: "", peso: "", rir: "" },
+        ],
+      };
+    }
+    return routine;
+  });
 };
 
 // Eliminar una rutina
 export const deleteRoutine = (routines, id) => {
   return routines.filter((routine) => routine.id !== id);
-};
-
-// Editar una rutina
-export const editRoutine = (routines, editingRoutine) => {
-  return routines.map((routine) =>
-    routine.id === editingRoutine.id ? editingRoutine : routine
-  );
 };
